@@ -162,7 +162,7 @@ bot.dialog("UserExist",[
             {
                 var contact = {
                     firstname: session.conversationData.q5,
-                    lastname: session.conversationData.q5,
+                    //lastname: session.conversationData.q5,
                     mobilephone: session.conversationData.q6,
                     emailaddress1: session.conversationData.q3
                 };
