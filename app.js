@@ -8,6 +8,7 @@ var builder = require('botbuilder');
 
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
+
 var dynamicsWebApi = new DynamicsWebApi({ 
     webApiUrl: 'https://advancyaad.crm4.dynamics.com/api/data/v8.2/',
     onTokenRefresh: acquireToken
@@ -22,11 +23,11 @@ function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
             dynamicsWebApiCallback(token);
-            console.log(token);
+
         }
         else{
             
-            console.log(error);
+           // console.log(error);
         }
     }
     adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
@@ -91,7 +92,7 @@ var bot = new builder.UniversalBot(connector,{
     }   
 });
 
-/*
+
 bot.dialog("FirstDialog",[
     function(session){
        session.send("شكرا، سنقوم بالتواصل بلغتنا العربية.");
@@ -252,7 +253,7 @@ bot.dialog("getEmail",[
             session.replaceDialog('getEmail', { reprompt: true });
     }
 ]);
-*/
+
 bot.on('conversationUpdate', function (activity) {  
     if (activity.membersAdded) {
         activity.membersAdded.forEach((identity) => {
