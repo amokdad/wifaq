@@ -254,15 +254,7 @@ bot.dialog("getEmail",[
     }
 ]);
 
-bot.on('conversationUpdate', function (activity) {  
-    if (activity.membersAdded) {
-        activity.membersAdded.forEach((identity) => {
-            if (identity.id === activity.address.bot.id) {
-                   bot.beginDialog(activity.address, 'setLanguageWithPic');
-             }
-         });
-    }
- });
+
  
 bot.dialog("setLanguageWithPic",[
     function(session){
@@ -306,3 +298,13 @@ bot.dialog("setLanguageWithPic",[
        
     }
 ])
+
+bot.on('conversationUpdate', function (activity) {  
+    if (activity.membersAdded) {
+        activity.membersAdded.forEach((identity) => {
+            if (identity.id === activity.address.bot.id) {
+                   bot.beginDialog(activity.address, 'setLanguageWithPic');
+             }
+         });
+    }
+ });
