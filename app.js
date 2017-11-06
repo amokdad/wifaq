@@ -94,6 +94,7 @@ var bot = new builder.UniversalBot(connector,{
     }   
 });
 
+bot.dialog('/', intents);
 
 bot.dialog("FirstDialog",[
     function(session){
@@ -289,7 +290,8 @@ bot.dialog("setLanguageWithPic",[
         CreateContact(contact,crmCase);
         //session.send(contactId);
        //var locale = program.Helpers.GetLocal(results.response.index);
-       session.conversationData.lang = "ar";*/
+       */
+       session.conversationData.lang = "ar";
        session.preferredLocale("ar",function(err){
            if(!err){
               session.replaceDialog("FirstDialog");    
