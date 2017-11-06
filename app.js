@@ -5,6 +5,7 @@ A simple echo bot for the Microsoft Bot Framework.
 var restify = require('restify');
 var builder = require('botbuilder');
 
+/*
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
 var dynamicsWebApi = new DynamicsWebApi({ 
@@ -30,6 +31,7 @@ function acquireToken(dynamicsWebApiCallback){
     }
     adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
 }
+*/
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -89,7 +91,7 @@ var bot = new builder.UniversalBot(connector,{
     }   
 });
 
-
+/*
 bot.dialog("FirstDialog",[
     function(session){
        session.send("شكرا، سنقوم بالتواصل بلغتنا العربية.");
@@ -250,7 +252,7 @@ bot.dialog("getEmail",[
             session.replaceDialog('getEmail', { reprompt: true });
     }
 ]);
-
+*/
 bot.on('conversationUpdate', function (activity) {  
     if (activity.membersAdded) {
         activity.membersAdded.forEach((identity) => {
