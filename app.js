@@ -106,7 +106,7 @@ bot.dialog("FirstDialog",[
     function(session,results){
         session.conversationData.q1 = results.response.entity;
         session.send("شكرا لاختيارك. أود أن نؤكد لك أننا سنسعى لتأمين الوفاق عند أسرتك بإذن الله.");
-        builder.Prompts.text(session,'يرجى تزويدنا بالمزيد من التفاصيل عن المشكلة عبر طباعتها، أو بإمكانك الضغط على زر "تسجيل صوتي" لترك رسالة صوتية بسهولة.\n\nوسيقوم أحد مستشارينا بالتواصل معك بأسرع وقت ممكن');  
+        builder.Prompts.text(session,'يرجى تزويدنا بالمزيد من التفاصيل عن المشكلة عبر طباعتها، ة.\n\nوسيقوم أحد مستشارينا بالتواصل معك بأسرع وقت ممكن');  
     },
     function(session,results){
        session.conversationData.q2 = session.message.text;
