@@ -8,8 +8,9 @@ var https = require('https');
 
 
 var DynamicsWebApi = require('dynamics-web-api');
-var AuthenticationContext = require('adal-node').AuthenticationContext;
 /*
+var AuthenticationContext = require('adal-node').AuthenticationContext;
+
 var dynamicsWebApi = new DynamicsWebApi({ 
     webApiUrl: 'https://advancyaad.crm4.dynamics.com/api/data/v8.2/',
     onTokenRefresh: acquireToken
