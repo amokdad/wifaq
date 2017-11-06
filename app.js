@@ -8,7 +8,7 @@ var builder = require('botbuilder');
 
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
-
+/*
 var dynamicsWebApi = new DynamicsWebApi({ 
     webApiUrl: 'https://advancyaad.crm4.dynamics.com/api/data/v8.2/',
     onTokenRefresh: acquireToken
@@ -19,7 +19,7 @@ var clientId = '1ae582b5-4b16-4b40-b180-0239e9b2b947';
 var username = 'amokdad@advancyaad.onmicrosoft.com';
 var password = 'p@ssw0rd2';
 var adalContext = new AuthenticationContext(authorityUrl);
-/*
+
 function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
