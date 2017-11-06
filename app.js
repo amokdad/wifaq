@@ -6,6 +6,7 @@ var restify = require('restify');
 var builder = require('botbuilder');
 var https = require('https');
 
+/*
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
 
@@ -32,7 +33,7 @@ function acquireToken(dynamicsWebApiCallback){
     }
     adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
 }
-
+*/
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -254,8 +255,6 @@ bot.dialog("getEmail",[
     }
 ]);
 
-
- 
 bot.dialog("setLanguageWithPic",[
     function(session){
         
