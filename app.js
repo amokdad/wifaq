@@ -258,7 +258,7 @@ bot.on('conversationUpdate', function (activity) {
          });
     }
  });
-
+ 
 bot.dialog("setLanguageWithPic",[
     function(session){
         
