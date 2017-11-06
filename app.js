@@ -83,8 +83,10 @@ var intents = new builder.IntentDialog({ recognizers: [
 * ---------------------------------------------------------------------------------------- */
 
 // Create your bot with a function to receive messages from the user
-var bot = new builder.UniversalBot(connector, function (session) {
-
+var bot = new builder.UniversalBot(connector,{
+    localizerSettings: { 
+        defaultLocale: "en" 
+    }   
 });
 
 
