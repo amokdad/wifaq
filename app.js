@@ -4,11 +4,11 @@ A simple echo bot for the Microsoft Bot Framework.
 
 var restify = require('restify');
 var builder = require('botbuilder');
-
+var https = require('https');
 
 var DynamicsWebApi = require('dynamics-web-api');
 var AuthenticationContext = require('adal-node').AuthenticationContext;
-/*
+
 var dynamicsWebApi = new DynamicsWebApi({ 
     webApiUrl: 'https://advancyaad.crm4.dynamics.com/api/data/v8.2/',
     onTokenRefresh: acquireToken
@@ -32,7 +32,7 @@ function acquireToken(dynamicsWebApiCallback){
     }
     adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
 }
-*/
+
 
 // Setup Restify Server
 var server = restify.createServer();
