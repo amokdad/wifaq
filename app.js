@@ -19,11 +19,11 @@ var clientId = '1ae582b5-4b16-4b40-b180-0239e9b2b947';
 var username = 'amokdad@advancyaad.onmicrosoft.com';
 var password = 'p@ssw0rd2';
 var adalContext = new AuthenticationContext(authorityUrl);
+/*
 function acquireToken(dynamicsWebApiCallback){
     function adalCallback(error, token) {
         if (!error){
             dynamicsWebApiCallback(token);
-
         }
         else{
             
@@ -32,7 +32,7 @@ function acquireToken(dynamicsWebApiCallback){
     }
     adalContext.acquireTokenWithUsernamePassword(resource, username, password, clientId, adalCallback);
 }
-
+*/
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -138,7 +138,7 @@ function CreateContact(contact,crmCase){
 }
 function CreateCase(crmCase){
     dynamicsWebApi.create(crmCase, "incidents").then(function (response) {
-        console.log('done');
+        //console.log('done');
 
     })
     .catch(function (error){
@@ -217,7 +217,7 @@ bot.dialog("handeCRMEmail",[
         var email = args.email;
         dynamicsWebApi.retrieveAll("contacts", ["emailaddress1","fullname"], "emailaddress1 eq '" + email + "'").then(function (response) {
             var records = response.value;
-            console.log(JSON.stringify(records));
+            //console.log(JSON.stringify(records));
             var exist = records != null && records.length >= 1;
             if(exist)
                 {
