@@ -170,7 +170,7 @@ bot.dialog("UserExist",[
             }
             else{
                 crmCase["customerid_contact@odata.bind"] = "https://advancyaad.crm4.dynamics.com/api/data/v8.2/contacts("+session.conversationData.contactId+")";
-                CreateLead(crmCase);
+                CreateCase(crmCase);
             }
 
 
